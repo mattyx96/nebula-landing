@@ -28,10 +28,10 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col flex-grow bg-background-primary ">
+    <div className="flex flex-col flex-grow bg-background-primary">
       <main className="container mx-auto p-2 flex flex-col flex-grow gap-8 items-center min-h-screen w-screen h-full">
         <FramePanel
-          className="flex flex-col flex-grow"
+          className="flex flex-col flex-grow py-10"
           renderSideHeader={
             <IconButton
               size={isDesktop ? 'M' : 'S'}
@@ -90,11 +90,12 @@ export default function Home() {
         >
           <div
             className={`flex flex-col justify-center ${isDesktop ? 'items-start px-10' : 'items-start px-4'} flex-grow pb-40`}>
-            <Text variant={isMobile ? 'display2' : "display1"}>
+            <Text variant={isMobile ? 'display2' : "display1"} className="!leading-none">
               Nebula Design-System
             </Text>
-            <Text variant={isMobile ? 'body1' : "header6"} className="w-full md:w-3/4">
-              A futuristic design system inspired by 1970s space age style, Bauhaus principles, and Star Trek&apos;s LCARS
+            <Text variant={isMobile ? 'body1' : "header6"} className="w-full md:w-3/4 mt-12">
+              A futuristic design system inspired by 1970s space age style, Bauhaus principles, and Star Trek&apos;s
+              LCARS
               interface
             </Text>
             <div className="flex items-center gap-4 mt-10">
@@ -102,13 +103,13 @@ export default function Home() {
                 size={isDesktop ? 'L' : 'M'}
                 variant="standard"
                 text="GitHub"
-                onClick={()=>openURL('https://github.com/mattyx96/nebula-ds-react-library')}
+                onClick={() => openURL('https://github.com/mattyx96/nebula-ds-react-library')}
               />
               <Button
                 size={isDesktop ? 'L' : 'M'}
                 rounded="R"
                 text="Getting Started"
-                onClick={()=>openURL('https://nebula-ds-react-library.irongalaxy.space')}
+                onClick={() => openURL('https://nebula-ds-react-library.irongalaxy.space')}
               />
             </div>
           </div>
