@@ -74,14 +74,14 @@ export default function Home() {
                             <Button
                                 size={isDesktop ? 'M' : 'S'}
                                 variant="standard"
-                                className={isDesktop ? buttonClassNames().smallButton : buttonClassNames().largeButton}
+                                className={isDesktop ? buttonClassNames().largeButton : 'hidden'}
                                 text=""
                             />
                             <Button
                                 size={isDesktop ? 'M' : 'S'}
                                 rounded="R"
                                 variant="standard"
-                                className={buttonClassNames().largeButton + ' w-full'}
+                                className={buttonClassNames().largeButton}
                                 text=""
                             />
                         </>
@@ -89,7 +89,7 @@ export default function Home() {
                 >
                     <div
                         className={`flex flex-col justify-center ${isDesktop ? 'items-center px-10' : 'items-start px-4'} flex-grow xl:!grid grid-cols-6`}>
-                        <div className="col-span-4 lg:-translate-y-10 2xl:-translate-y-1/3">
+                        <div className="col-span-4 -translate-y-5 lg:-translate-y-10 2xl:-translate-y-1/3">
                             <Text variant={isMobile ? 'display2' : "display1"} className="!leading-none">
                                 Nebula Design-System
                             </Text>
