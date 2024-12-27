@@ -26,7 +26,7 @@ export default function Home() {
     return (
         <div className="flex flex-col flex-grow bg-background-primary">
             <main
-                className="container mx-auto p-2 flex flex-col flex-grow gap-8 items-center min-h-screen w-screen h-full">
+                className="max-w-7xl container mx-auto p-2 flex flex-col flex-grow gap-8 items-center min-h-[100dvh] w-screen h-full">
                 <FramePanel
                     className="flex flex-col flex-grow py-10"
                     renderSideHeader={
