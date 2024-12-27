@@ -20,8 +20,31 @@ export default function Home() {
         }
     }
 
-    const isMobile = Boolean(breakpoint.smallerOrEqual('sm'))
+    const isMobile = Boolean(breakpoint.smaller('sm'))
+    const isTablet = Boolean(breakpoint.between('sm', 'lg'))
     const isDesktop = Boolean(breakpoint.greater('lg'))
+
+    const getTitleClass = () => {
+        switch (true) {
+            case isMobile:
+                return 'header1'
+            case isTablet:
+                return 'display2'
+            case isDesktop:
+                return 'display1'
+        }
+    }
+
+    const getContentParagraphClass = () => {
+        switch (true) {
+            case isMobile:
+                return 'body3'
+            case isTablet:
+                return 'body2'
+            case isDesktop:
+                return 'body1'
+        }
+    }
 
     return (
         <div className="flex flex-col flex-grow bg-background-primary">
@@ -89,11 +112,11 @@ export default function Home() {
                 >
                     <div
                         className={`flex flex-col justify-center ${isDesktop ? 'items-center px-10' : 'items-start px-4'} flex-grow xl:!grid grid-cols-6`}>
-                        <div className="col-span-4 -translate-y-5 lg:-translate-y-10 2xl:-translate-y-1/3">
-                            <Text variant={isMobile ? 'display2' : "display1"} className="!leading-none">
+                        <div className="col-span-4 -translate-y-5 lg:-translate-y-10">
+                            <Text variant={getTitleClass()} className="!leading-none">
                                 Nebula Design-System
                             </Text>
-                            <Text variant={"body1"} className="w-full md:w-3/4 mt-12">
+                            <Text variant={getContentParagraphClass()} className="w-full md:w-3/4 mt-12">
                                 A retro-futuristic design system inspired by 1970s space age style, Bauhaus principles,
                                 and
                                 Star
@@ -101,7 +124,7 @@ export default function Home() {
                                 LCARS
                                 interface.
                             </Text>
-                            <Text variant={"body1"} className="w-full md:w-3/4 mt-5">
+                            <Text variant={getContentParagraphClass()} className="w-full md:w-3/4 mt-5">
                                 A UI kit library actually available for react.js.
                             </Text>
                             <div className="flex items-center gap-4 mt-10">
