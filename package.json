@@ -12,7 +12,7 @@
     "@heroicons/react": "^2.1.5",
     "@react-awesome/use-breakpoint": "^1.0.0",
     "nebula-ds-react-library": "^0.0.38",
-    "next": "14.2.8",
+    "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18"
   },
