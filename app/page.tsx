@@ -89,7 +89,7 @@ export default function Home() {
                 >
                     <div
                         className={`flex flex-col justify-center ${isDesktop ? 'items-center px-10' : 'items-start px-4'} flex-grow xl:!grid grid-cols-6`}>
-                        <div className="col-span-4 -translate-y-5 lg:-translate-y-10 2xl:-translate-y-1/3">
+                        <div className="col-span-4 -translate-y-5 lg:-translate-y-10">
                             <Text variant={isMobile ? 'display2' : "display1"} className="!leading-none">
                                 Nebula Design-System
                             </Text>
