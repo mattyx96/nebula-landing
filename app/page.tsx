@@ -46,6 +46,17 @@ export default function Home() {
         }
     }
 
+    const getCtaButtonSizeClass = () => {
+        switch (true) {
+            case isMobile:
+                return 'S'
+            case isTablet:
+                return 'M'
+            case isDesktop:
+                return 'L'
+        }
+    }
+
     return (
         <div className="flex flex-col flex-grow bg-background-primary">
             <main
@@ -130,14 +141,14 @@ export default function Home() {
                             <div className="flex items-center gap-4 mt-10">
                                 <a href="https://github.com/mattyx96/nebula-ds-react-library" target="_blank">
                                     <Button
-                                        size={isDesktop ? 'L' : 'M'}
+                                        size={getCtaButtonSizeClass()}
                                         variant="standard"
                                         text="GitHub"
                                     />
                                 </a>
                                 <a href="https://nebula-ds-react-library.irongalaxy.space" target="_blank">
                                     <Button
-                                        size={isDesktop ? 'L' : 'M'}
+                                        size={getCtaButtonSizeClass()}
                                         rounded="R"
                                         text="Explore UI Components"
                                     />
